@@ -1,0 +1,386 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <conio.h>
+#include<Windows.h>
+using namespace std;
+int main() {
+	int cold, salad, meat, desert, tea, exit, choice, coldNum = 0, saladNum = 0, meatNum = 0, desertNum = 0, teaNum = 0;
+	double   number,coldPrice = 0, saladPrice = 0, meatPrice = 0, desertPrice = 0, teaPrice = 0, salesTax = 1.18, total;
+	cout << "\n\n\n\t\t\t" << char(201) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(187) << "\n";
+	cout << "\t\t\t" << char(186) << "\tTELEQULLE\t " << char(186) << "\n";
+	cout << "\t\t\t" << char(200) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(205) << char(188) << "\n\n";
+	cout << "\t\t\t   Akademik Abbaszade 12\n\n";
+	cout << "\t\t\t      (070)770-70-70\n\n";
+	cout << "\t\t\t        14:00-00:00\n\n";
+	cout << "\t\t Cay sufresi ucun depozit: Adam basi 30 AZN\n\n";
+	cout << "\t  TELEQULLE menyusuna daxil olmaq ucun ENTER duymesini sixin\n";
+	_getch();
+	system("cls");
+	cout << "\n\nTELEQULLE menyusunda secim edin:"
+		<< "\n\n1) Soyuq Qelyanaltilar"
+		<< "\n2) Salatlar"
+		<< "\n3) Et Yemekleri"
+		<< "\n4) Desertler" 
+		<< "\n5) Cay Destgahi" 
+		<< "\n6) Cixis";
+	cout << "\n\nSecim edin (1-6)? ";
+	cin >> choice;
+	cout << "\n";
+	do {
+		switch (choice) {
+
+		case 1:
+			int coldChoice;
+			cout << "\n\n1) Qara kuru          60.00 AZN "
+				<< "\n2) Qirmizi kuru       20.00 AZN"
+				<< "\n3) Baliq assorti      25.00 AZN"
+				<< "\n4) Et assorti         20.00 AZN"
+				<< "\n5) Terevez sebeti     3.00 AZN";
+			cout << "\n\nHansi nov soyuq qelyanalti isteyirsiniz? ";
+			cin >> coldChoice;
+			switch (coldChoice) {
+			case 1:
+				cout << "\nNece porsiya qara kuru isteyirsiniz? ";
+				cin >> coldNum;
+				cout << "\n";
+				coldPrice = coldNum * 60;
+				cout << "\n";
+				break;
+			case 2:
+				cout << "\nNece porsiya qirmizi kuru isteyirsiniz? ";
+				cin >> coldNum;
+				cout << "\n";
+				coldPrice = coldNum * 20;
+				cout << "\n";
+				break;
+			case 3:
+				cout << "\nNece porsiya baliq assorti isteyirsiniz? ";
+				cin >> coldNum;
+				cout << "\n";
+				coldPrice = coldNum * 25;
+				cout << "\n";
+				break;
+			case 4:
+				cout << "\nNece porsiya et assorti isteyirsiniz?";
+				cin >> coldNum;
+				cout << "\n";
+				coldPrice = coldNum * 20;
+				cout << "\n";
+				break;
+			case 5:
+				cout << "\nNece porsiya terevez assorti isteyirsiniz?";
+				cin >> coldNum;
+				cout << "\n";
+				coldPrice = coldNum * 3;
+				cout << "\n";
+				break;
+			default:
+				cout << coldNum << " Duzgun secim edin! ";
+				int coldChoice;
+				cout << "\n\n1) Qara kuru          60.00 AZN "
+					<< "\n2) Qirmizi kuru       20.00 AZN"
+					<< "\n3) Baliq assorti      25.00 AZN "
+					<< "\n4) Et assorti         20.00 AZN"
+					<< "\n5) Terevez sebeti     3.00 AZN";
+				cout << "\n\nHansi nov soyuq qelyanalti isteyirsiniz? ";
+				cin >> coldChoice;
+				cout << "\n";
+				break;
+			}
+			system("cls");
+			cout << "\n\nTELEQULLE menyusunda secim edin:"
+				<< "\n\n1) Soyuq Qelyanaltilar"
+				<< "\n2) Salatlar"
+				<< "\n3) Et Yemekleri"
+				<< "\n4) Desertler" 
+				<< "\n5) Cay Destgahi"
+				<< "\n6) Cixis";
+			cout << "\n\nSecim edin (1-6)? ";
+			cin >> choice;
+			cout << "\n";
+			break;
+			system("cls");
+		case 2:
+			int saladChoice;
+			cout << "\n\n1) Olivye salati       6.00 AZN"
+				<< "\n2) Sezar salati        10.00 AZN"
+				<< "\n3) Fyujen Salati       8.00 AZN"
+				<< "\n4) Terevez salati      6.00 AZN";
+			cout << "\n\nHansi nov salat isteyirsiniz? ";
+			cin >> saladChoice;
+			switch (saladChoice) {
+			case 1:
+				cout << "\nNece porsiya Olivye salati isteyirsiniz?";
+				cin >> saladNum;
+				cout << "\n";
+				saladPrice = saladNum * 6;
+				cout << "\n";
+				break;
+			case 2:
+				cout << "\nNece porsiya Sezar salati isteyirsiniz? ";
+				cin >> saladNum;
+				cout << "\n";
+				saladPrice = saladNum * 10;
+				cout << "\n";
+				break;
+			case 3:
+				cout << "\nNece porsiya Fyujen salati isteyirsiniz? ";
+				cin >> saladNum;
+				cout << "\n";
+				saladPrice = saladNum * 8;
+				cout << "\n";
+				break;
+			case 4:
+				cout << "\nNece porsiya Terevez salati isteyirsiniz? ";
+				cin >> saladNum;
+				cout << "\n";
+				saladPrice = saladNum * 6;
+				cout << "\n";
+				break;
+			default:
+				cout << saladNum << " Duzgun secim edin!";
+				int saladChoice;
+				cout << "\n\n1) Olivye salati       6.00 AZN"
+					<< "\n2) Sezar salati        10.00 AZN"
+					<< "\n3) Fyujen Salati       8.00 AZN"
+					<< "\n4) Terevez salati      6.00 AZN";
+				cout << "\n\nHansi nov salat isteyirsiniz? ";
+				cin >> saladChoice;
+				cout << "\n";
+				break;
+			}
+			system("cls");
+			cout << "\n\nTELEQULLE menyusunda secim edin:"
+				<< "\n\n1) Soyuq Qelyanaltilar"
+				<< "\n2) Salatlar"
+				<< "\n3) Et Yemekleri"
+				<< "\n4) Desertler" 
+				<< "\n5) Cay Destgahi" 
+				<< "\n6) Cixis";
+			cout << "\n\nSecim edin (1-6)? ";
+			cin >> choice;
+			cout << "\n";
+			break;
+			system("cls");
+		case 3:
+			int meatChoice;
+			cout << "\n\n1) Icli Langet          25.00 AZN"
+				<< "\n2) Langet               20.00 AZN"
+				<< "\n3) Mermer Eti           50.00 AZN"
+				<< "\n4) Mal Steyki Tibon     40.00 AZN";
+			cout << "\n\nHansi nov et yemekleri isteyirsiniz? ";
+			cin >> meatChoice;
+			switch (meatChoice) {
+			case 1:
+				cout << "\nNece porsiya Icli langet isteyirsiniz? ";
+				cin >> meatNum;
+				cout << "\n";
+				meatPrice = meatNum * 25;
+				cout << "\n";
+				break;
+			case 2:
+				cout << "\nNece porsiya langet isteyirsiniz? ";
+				cin >> meatNum;
+				cout << "\n";
+				meatPrice = meatNum * 20;
+				cout << "\n";
+				break;
+			case 3:
+				cout << "\nNece porsiya mermer eti isteyirsiniz?";
+				cin >> meatNum;
+				cout << "\n";
+				meatPrice = meatNum * 50;
+				cout << "\n";
+				break;
+			case 4:
+				cout << "\nNece porsiya Mal steyki Tibon isteyirsiniz? ";
+				cin >> meatNum;
+				cout << "\n";
+				meatPrice = meatNum * 40;
+				cout << "\n";
+				break;
+			default:
+				cout << meatNum << " Duzgun secim edin!";
+				int meatChoice;
+				cout << "\n\n1) Icli Langet          25.00 AZN"
+					<< "\n2) Langet               20.00 AZN"
+					<< "\n3) Mermer Eti           50.00 AZN"
+					<< "\n4) Mal Steyki Tibon     40.00 AZN";
+				cout << "\n\nHansi nov et yemekleri isteyirsiniz? ";
+				cin >> meatChoice;
+				cout << "\n";
+				break;
+			}
+			system("cls");
+			cout << "\n\nTELEQULLE menyusunda secim edin:"
+				<< "\n\n1) Soyuq Qelyanaltilar"
+				<< "\n2) Salatlar"
+				<< "\n3) Et Yemekleri"
+				<< "\n4) Desertler" 
+				<< "\n5) Cay Destgahi" 
+				<< "\n6) Cixis";
+			cout << "\n\nSecim edin (1-6)? ";
+			cin >> choice;
+			cout << "\n";
+			break;
+		case 4:
+			system("cls");
+			int desertChoice;
+			cout << "\n\n1) Meyve assorti          25.00 AZN"
+				<< "\n2) Murebbe                5.00 AZN"
+				<< "\n3) Tiramisu               10.00 AZN";
+			cout << "\n\nHansi nov desert isteyirsiniz? ";
+			cin >> desertChoice;
+			switch (desertChoice) {
+			case 1:
+				cout << "\nNece porsiya meyve assorti isteyirsiniz? ";
+				cin >> desertNum;
+				cout << "\n";
+				desertPrice = desertNum * 25;
+				cout << "\n";
+				break;
+			case 2:
+				cout << "\nNece porsiya murebbe isteyirsiniz? ";
+				cin >> desertNum;
+				cout << "\n";
+				desertPrice = desertNum * 5;
+				cout << "\n";
+				break;
+			case 3:
+				cout << "\nNece porsiya tiramisu isteyirsiniz?";
+				cin >> desertNum;
+				cout << "\n";
+				desertPrice = desertNum * 10;
+				cout << "\n";
+				break;
+			default:
+				cout << desertNum << " Duzgun secim edin!";
+				int desertChoice;
+				cout << "\n\n1) Meyve assorti          25.00 AZN"
+					<< "\n2) Murebbe                5.00 AZN"
+					<< "\n3) Tiramisu               10.00 AZN";
+				cout << "\n\nHansi nov desert isteyirsiniz? ";
+				cin >> desertChoice;
+				cout << "\n";
+				break;
+			}
+			system("cls");
+			cout << "\n\nTELEQULLE menyusunda secim edin:"
+				<< "\n\n1) Soyuq Qelyanaltilar"
+				<< "\n2) Salatlar"
+				<< "\n3) Et Yemekleri"
+				<< "\n4) Desertler" 
+				<< "\n5) Cay Destgahi"
+				<< "\n6) Cixis";
+			cout << "\n\nSecim edin (1-6)? ";
+			cin >> choice;
+			cout << "\n";
+			break;
+		case 5:
+			int tea, teaChoice;
+			cout << "\n\n1) 1 neferlik cay destgahi       20.00 AZN";
+			cout << "\nsecim edin: ";
+			cin >> teaChoice;
+			switch (teaChoice) {
+			case 1:
+				cout << "\nNece neferlik cay destgahi isteyirsiniz? ";
+				cin >> teaNum;
+				cout << "\n";
+				teaPrice = teaNum * 20;
+				cout << "\n";
+				break;
+			default:
+				cout << desertNum << " Duzgun secim edin!";
+				int tea, teaChoice;
+				cout << "\n\n1) 1 neferlik cay destgahi       20.00 AZN";
+				cin >> teaChoice;
+				cout << "\n";
+				break;
+			}
+			system("cls");
+			cout << "\n\nTELEQULLE menyusunda secim edin:"
+				<< "\n\n1) Soyuq Qelyanaltilar"
+				<< "\n2) Salatlar"
+				<< "\n3) Et Yemekleri"
+				<< "\n4) Desertler"
+				<< "\n5) Cay Destgahi" 
+				<< "\n6) Cixis";
+			cout << "\n\nSecim edin (1-6)? ";
+			cin >> choice;
+			cout << "\n";
+			break;
+			system("cls");
+		case 6:
+			cout << "\n\nRestoranimizi secdiyiniz ucun tesekkur edirik!";
+			break;
+		default:
+			cout << "\n\n" << choice << " Duzgun secim edin!\n\n";
+			cout << "\n\nTELEQULLE menyusunda secim edin:"
+				<< "\n\n1) Soyuq Qelyanaltilar"
+				<< "\n2) Salatlar"
+				<< "\n3) Et Yemekleri"
+				<< "\n4) Desertler"
+				<< "\n5) Cay Destgahi"
+				<< "\n6) Cixis";
+			cout << "\n\nSecim edin (1-6)? ";
+			cin >> choice;
+			cout << "\n";
+			break;
+		}
+	} while (choice != 6);
+	if (choice == 6) {
+		system("cls");
+		cout << "\n\n\tSIFARISINIZ\n";
+		if (coldNum != 1) {
+			cout << "\n" << coldNum << " Soyuq Qelyanaltilar";
+		}
+		else {
+			cout << "\n" << coldNum << " Soyuq Qelyanalti";
+		}
+		if (saladNum != 1) {
+			cout << "\n" << saladNum << " Salatlar";
+		}
+		else {
+			cout << "\n" << saladNum << " Salat";
+		}
+		if (meatNum != 1) {
+			cout << "\n" << meatNum << " Et Yemekleri";
+		}
+		else {
+			cout << "\n" << meatNum << " Et Yemeyi";
+		}
+		if (meatNum != 1) {
+			cout << "\n" << desertNum << " Desertler";
+		}
+		else {
+			cout << "\n" << desertNum << " Desert";
+		}
+		if (meatNum != 1) {
+			cout << "\n" << teaNum << " Cay destgahlari";
+		}
+		else {
+			cout << "\n" << teaNum << " Cay destgahi\n\n\n";
+		}
+		cout << "\n\n\n\tODENILECEK MEBLEG\n";
+		coldPrice = coldPrice;
+		saladPrice = saladPrice;
+		meatPrice = meatPrice;
+		desertPrice = desertPrice;
+		teaPrice = teaPrice;
+		total = (coldPrice + saladPrice + meatPrice + desertPrice + teaPrice);
+		salesTax = (total * salesTax) - total;
+		cout << "\n\nPrice of items: AZN  " << setprecision(2) << fixed << total;
+		total = total + salesTax;
+		cout << "\nTax of items: AZN  " << salesTax;
+		cout << "\n -----------------------"
+			<< "\n|Total price: AZN  " << total << "|\n"
+			<< " -----------------------\n\n";
+		cout << "Odenis etmek ucun mebleg daxil edin: \n";
+		cin >> number;
+		cout << number << " AZN daxil etdiniz!\n";
+		cout << "Qaliginiz - " << number - total << " AZN\n";
+		cout << "\nRestoranimiza qonaq geldiyiniz tesekkur edirik!\n\n";
+	}
+}
+
